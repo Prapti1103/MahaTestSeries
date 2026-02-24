@@ -13,18 +13,15 @@ import EmailIcon from "@mui/icons-material/Email";
 
 export default function Footer() {
   return (
-    <Box sx={{ background: "#25146b", color: "#fff", pt: 6 }}>
+    <Box sx={{ backgroundColor: "#25146b", color: "#fff", pt: 6 }}>
 
       <Container maxWidth="xl">
 
-       
-
-        {/* 🔥 Reduced Column Gap */}
-        <Grid container spacing={2}>
+        <Grid container spacing={4}>
 
           {/* Company */}
-          <Grid item xs={12} md={2.4}>
-            <Typography fontWeight={600} mb={2} sx={{ fontSize: 18 }}>
+          <Grid item xs={12} sm={6} md={2}>
+            <Typography fontWeight={600} mb={2} fontSize={18}>
               Company
             </Typography>
 
@@ -35,20 +32,29 @@ export default function Footer() {
           </Grid>
 
           {/* Services */}
-          <Grid item xs={12} md={2.4}>
-            <Typography fontWeight={600} mb={2} sx={{ fontSize: 18 }}>
+          <Grid item xs={12} sm={6} md={2}>
+            <Typography fontWeight={600} mb={2} fontSize={18}>
               Services
             </Typography>
 
-            <FooterLink to="https://courses.ooacademy.co.in/previous-year" label="Test Series" />
-            <FooterLink to="https://courses.ooacademy.co.in/study-material" label="Free Ebook" />
-            <FooterLink to="https://courses.ooacademy.co.in/study-material" label="Free Notes" />
+            <FooterLink
+              to="https://courses.ooacademy.co.in/previous-year"
+              label="Test Series"
+            />
+            <FooterLink
+              to="https://courses.ooacademy.co.in/study-material"
+              label="Free Ebook"
+            />
+            <FooterLink
+              to="https://courses.ooacademy.co.in/study-material"
+              label="Free Notes"
+            />
             <FooterLink to="/live-lectures" label="Free Live Lectures" />
           </Grid>
 
           {/* Important Links */}
-          <Grid item xs={12} md={2.4} sx={{ fontSize: 18 }}>
-            <Typography fontWeight={600} mb={2}>
+          <Grid item xs={12} sm={6} md={2}>
+            <Typography fontWeight={600} mb={2} fontSize={18}>
               Important Links
             </Typography>
 
@@ -58,67 +64,44 @@ export default function Footer() {
             <FooterLink to="/terms" label="Terms & Conditions" />
           </Grid>
 
-          {/* 🔥 ENHANCED CONTACT COLUMN */}
-          <Grid item xs={12} md={2.4}>
-            <Box
-              sx={{
-                p: 2,
-                borderRadius: 3,
-                background: "linear-gradient(135deg,#1e125a,#2d1c88)",
-                transition: "0.3s ease",
-                "&:hover": {
-                  transform: "translateY(-6px)",
-                  boxShadow: "0 15px 30px rgba(0,0,0,0.3)"
-                }
-              }}
-            >
-              <Typography
-                variant="h5"
-                fontWeight={700}
-                mb={2}
-                sx={{ letterSpacing: 1 }}
-              >
-                Contact Us
+          {/* Contact */}
+          <Grid item xs={12} sm={6} md={3}>
+            <Typography fontWeight={600} mb={2} fontSize={18}>
+              Contact Us
+            </Typography>
+
+            <Typography fontWeight={500} mb={2}>
+              Maharashtra Talent Search Examination
+            </Typography>
+
+            <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
+              <LocationOnIcon sx={{ mr: 1, fontSize: 18 }} />
+              <Typography fontSize={14}>
+                N. Wadia College Campus, Pune - 1
               </Typography>
+            </Box>
 
-              <Typography sx={{ fontWeight: 600 }}>
-                Maharashtra Talent Search Examination
+            <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
+              <PhoneIcon sx={{ mr: 1, fontSize: 18 }} />
+              <Typography fontSize={14}>
+                (020) 26168486
               </Typography>
+            </Box>
 
-              <Box sx={{ display: "flex", alignItems: "center", mt: 2 }}>
-                <LocationOnIcon sx={{ mr: 1, color: "#00e5ff" }} />
-                <Typography sx={{ fontSize: 14 }}>
-                  N. Wadia College Campus, Pune - 1
-                </Typography>
-              </Box>
-
-              <Box sx={{ display: "flex", alignItems: "center", mt: 1 }}>
-                <PhoneIcon sx={{ mr: 1, color: "#00e5ff" }} />
-                <Typography sx={{ fontSize: 14 }}>
-                  (020) 26168486
-                </Typography>
-              </Box>
-
-              <Box sx={{ display: "flex", alignItems: "center", mt: 1 }}>
-                <EmailIcon sx={{ mr: 1, color: "#00e5ff" }} />
-                <Typography sx={{ fontSize: 14 }}>
-                  mahatestofficial@gmail.com
-                </Typography>
-              </Box>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <EmailIcon sx={{ mr: 1, fontSize: 18 }} />
+              <Typography fontSize={14}>
+                mahatestofficial@gmail.com
+              </Typography>
             </Box>
           </Grid>
 
-
           {/* Subscribe */}
-          <Grid item xs={12} md={2.4}>
-             <Typography
-          variant="h4"
-          fontWeight={700}
-          mb={4}
-          sx={{ letterSpacing: 2 }}
-        >
-          MAHATEST
-        </Typography>
+          <Grid item xs={12} sm={6} md={3}>
+            <Typography variant="h5" fontWeight={700} mb={3}>
+              MAHATEST
+            </Typography>
+
             <Typography fontWeight={600} mb={2}>
               Subscribe
             </Typography>
@@ -128,7 +111,7 @@ export default function Footer() {
               placeholder="Enter your email"
               size="small"
               sx={{
-                background: "#fff",
+                backgroundColor: "#fff",
                 borderRadius: 1,
                 mb: 2
               }}
@@ -138,11 +121,13 @@ export default function Footer() {
               fullWidth
               variant="contained"
               sx={{
-                background: "linear-gradient(135deg,#ff9800,#ff5722)",
+                background:
+                  "linear-gradient(135deg,#ff9800,#ff5722)",
                 textTransform: "none",
                 fontWeight: 600,
                 "&:hover": {
-                  background: "linear-gradient(135deg,#ff5722,#ff9800)"
+                  background:
+                    "linear-gradient(135deg,#ff5722,#ff9800)"
                 }
               }}
             >
@@ -151,7 +136,6 @@ export default function Footer() {
           </Grid>
 
         </Grid>
-
       </Container>
 
       {/* Bottom Bar */}
@@ -159,33 +143,48 @@ export default function Footer() {
         sx={{
           mt: 6,
           py: 2,
-          background: "#1a0f4d",
-          display: "flex",
-          justifyContent: "space-between",
-          px: 4,
-          flexWrap: "wrap"
+          backgroundColor: "#1a0f4d"
         }}
       >
-        <Typography>
-          © 2026 MAHATEST. All rights reserved.
-        </Typography>
+        <Container maxWidth="xl">
+          <Grid
+            container
+            alignItems="center"
+            justifyContent="space-between"
+          >
+            <Grid item xs={12} md="auto">
+              <Typography fontSize={14}>
+                © {new Date().getFullYear()} MAHATEST. All rights reserved.
+              </Typography>
+            </Grid>
 
-        <Box sx={{ display: "flex", gap: 3 }}>
-          <Typography component={Link} to="/privacypolicy" sx={bottomLink}>
-            Privacy Policy
-          </Typography>
+            <Grid item xs={12} md="auto">
+              <Box sx={{ display: "flex", gap: 3 }}>
+                <Typography
+                  component={Link}
+                  to="/privacypolicy"
+                  sx={bottomLink}
+                >
+                  Privacy Policy
+                </Typography>
 
-          <Typography component={Link} to="/terms" sx={bottomLink}>
-            Terms & Conditions
-          </Typography>
-        </Box>
+                <Typography
+                  component={Link}
+                  to="/terms"
+                  sx={bottomLink}
+                >
+                  Terms & Conditions
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
       </Box>
 
     </Box>
   );
 }
 
-/* Reusable Footer Link */
 function FooterLink({ to, label }) {
   return (
     <Typography
@@ -197,10 +196,8 @@ function FooterLink({ to, label }) {
         textDecoration: "none",
         mb: 1,
         fontSize: 14,
-        transition: "0.3s ease",
         "&:hover": {
-          color: "#00e5ff",
-          transform: "translateX(4px)"
+          color: "#00e5ff"
         }
       }}
     >
@@ -212,6 +209,7 @@ function FooterLink({ to, label }) {
 const bottomLink = {
   color: "#fff",
   textDecoration: "none",
+  fontSize: 14,
   "&:hover": {
     textDecoration: "underline"
   }
