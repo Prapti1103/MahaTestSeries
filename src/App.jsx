@@ -14,6 +14,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import ScrollToTop from "./pages/Scrolltop";
 import Login from "./pages/Login";
+import { BrowserRouter } from "react-router-dom";
 function App() {
   return (
     <>
